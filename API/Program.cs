@@ -16,8 +16,7 @@ namespace API
             using var scope = host.Services.CreateScope();
             var context = scope.ServiceProvider.GetRequiredService<StoreContext>();
             var logger = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();
-
-            try
+            try 
             {
                 context.Database.Migrate();
                 DbInitializer.Initialize(context);
