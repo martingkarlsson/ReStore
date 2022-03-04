@@ -10,7 +10,7 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/API/bin/Debug/net6.0/API.dll",
+            "program": "${workspaceFolder}/API/bin/Debug/net5.0/API.dll",
             "args": [],
             "cwd": "${workspaceFolder}/API",
             "stopAtEntry": false,
@@ -30,6 +30,13 @@
             "name": ".NET Core Attach",
             "type": "coreclr",
             "request": "attach"
-        }
+        },
+        {
+            "type": "pwa-chrome",
+            "request": "launch",
+            "name": "Launch Chrome against localhost",
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceFolder}"
+          }
     ]
 }

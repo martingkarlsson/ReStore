@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using API.Data;
 using API.Entities;
@@ -25,7 +24,7 @@ namespace API.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Product>> GetProduct(int id)
         {
-            var product =  await _context.Products.FindAsync(id);
+            var product = await _context.Products.FindAsync(id);
 
             if (product == null) return NotFound();
 
